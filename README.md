@@ -1,23 +1,23 @@
 # initial-commit2
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>موقعي الشخصي - صفحة واحدة</title>
+    <title>My Single-Page Website</title>
     <style>
-        /* CSS للتنسيق الأساسي للموقع */
+        /* Basic CSS for the website styling */
         body {
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            box-sizing: border-box; /* لضمان أن الحشوة والحدود لا تزيد عن عرض العنصر */
-            scroll-behavior: smooth; /* لجعل التمرير إلى الأقسام سلسًا */
+            box-sizing: border-box; /* Ensures padding and border are included in element's total width/height */
+            scroll-behavior: smooth; /* Makes scrolling to sections smooth */
             background-color: #f4f4f4;
             color: #333;
         }
 
-        /* رأس الصفحة */
+        /* Header Styling */
         header {
             background-color: #333;
             color: white;
@@ -30,7 +30,7 @@
             font-size: 2.5rem;
         }
 
-        /* قائمة التنقل */
+        /* Navigation Bar Styling */
         nav {
             background-color: #444;
             padding: 0.5rem 0;
@@ -41,8 +41,8 @@
             list-style: none;
             padding: 0;
             margin: 0;
-            display: flex; /* لعرض العناصر بجانب بعضها */
-            justify-content: center; /* لتوسيط العناصر */
+            display: flex; /* To display items side-by-side */
+            justify-content: center; /* To center the items */
         }
 
         nav ul li {
@@ -62,18 +62,18 @@
             border-radius: 5px;
         }
 
-        /* الأقسام الرئيسية */
+        /* Main Sections Styling */
         section {
-            padding: 60px 20px; /* حشوة علوية وسفلية أكبر */
+            padding: 60px 20px; /* Larger top/bottom padding */
             margin: 20px auto;
             max-width: 900px;
             background-color: white;
             border-radius: 8px;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            text-align: center; /* توسيط المحتوى داخل القسم */
+            text-align: center; /* Center content within the section */
         }
 
-        section:nth-of-type(even) { /* تنسيق مختلف للأقسام الزوجية */
+        section:nth-of-type(even) { /* Different styling for even-numbered sections */
             background-color: #e9e9e9;
         }
 
@@ -85,7 +85,7 @@
             padding-bottom: 10px;
         }
 
-        section h2::after { /* خط تحت العنوان */
+        section h2::after { /* Underline effect for section titles */
             content: '';
             position: absolute;
             left: 50%;
@@ -97,7 +97,7 @@
             border-radius: 5px;
         }
 
-        /* تذييل الصفحة */
+        /* Footer Styling */
         footer {
             background-color: #333;
             color: white;
@@ -106,7 +106,7 @@
             margin-top: 30px;
         }
 
-        /* تنسيق خاص بصفحة الاتصال */
+        /* Specific styling for the Contact section form */
         #contact form {
             display: flex;
             flex-direction: column;
@@ -116,7 +116,7 @@
         }
 
         #contact label {
-            text-align: right;
+            text-align: left; /* Align labels to the left */
             margin-bottom: 5px;
             font-weight: bold;
         }
@@ -128,12 +128,12 @@
             border: 1px solid #ddd;
             border-radius: 5px;
             font-size: 1rem;
-            width: 100%; /* لضمان أن تأخذ 100% من العرض المتاح في الـ flex-direction column */
-            box-sizing: border-box; /* للحفاظ على العرض ثابتًا مع الحشوة */
+            width: 100%; /* Ensures it takes 100% of available width in flex column */
+            box-sizing: border-box; /* To maintain width with padding */
         }
 
         #contact textarea {
-            resize: vertical; /* السماح بتغيير حجم مربع النص عموديا فقط */
+            resize: vertical; /* Allow vertical resizing only */
             min-height: 100px;
         }
 
@@ -152,7 +152,7 @@
             background-color: #0056b3;
         }
 
-        /* تنسيقات إضافية للمحتوى داخل الأقسام */
+        /* Additional styling for content within sections */
         .section-content {
             margin-top: 20px;
             line-height: 1.8;
@@ -163,62 +163,62 @@
 <body>
 
     <header>
-        <h1>موقعنا المميز</h1>
-        <p>مكانك الأمثل لاكتشاف ما نقدمه</p>
+        <h1>Our Amazing Website</h1>
+        <p>Your perfect place to discover what we offer</p>
     </header>
 
     <nav>
         <ul>
-            <li><a href="#about">من نحن</a></li>
-            <li><a href="#services">خدماتنا</a></li>
-            <li><a href="#contact">اتصل بنا</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Our Services</a></li>
+            <li><a href="#contact">Contact Us</a></li>
         </ul>
     </nav>
 
     <section id="about">
-        <h2>من نحن</h2>
+        <h2>About Us</h2>
         <div class="section-content">
-            <p>مرحباً بك في موقعنا! نحن فريق من المتخصصين الملتزمين بتقديم أفضل الحلول والخدمات لعملائنا. نسعى دائمًا للابتكار والتفوق في كل ما نقوم به، ونؤمن بأن الجودة هي مفتاح النجاح. مهمتنا هي بناء علاقات طويلة الأمد مع عملائنا من خلال تقديم قيمة حقيقية ودعم متواصل.</p>
-            <p>لدينا خبرة واسعة في [اذكر مجالات خبرتك، مثل: تطوير الويب، التسويق الرقمي، التصميم الجرافيكي]، ونعمل بشغف لتحويل أفكارك إلى واقع ملموس.</p>
+            <p>Welcome to our website! We are a team of dedicated professionals committed to providing the best solutions and services to our clients. We always strive for innovation and excellence in everything we do, believing that quality is the key to success. Our mission is to build long-term relationships with our clients by delivering true value and continuous support.</p>
+            <p>We have extensive experience in [mention your areas of expertise, e.g., web development, digital marketing, graphic design], and we work passionately to turn your ideas into tangible reality.</p>
         </div>
     </section>
 
     <section id="services">
-        <h2>خدماتنا</h2>
+        <h2>Our Services</h2>
         <div class="section-content">
-            <p>نقدم مجموعة واسعة من الخدمات المصممة لتلبية احتياجاتك المتنوعة. إليك بعض من أبرز خدماتنا:</p>
+            <p>We offer a wide range of services designed to meet your diverse needs. Here are some of our key services:</p>
             <ul>
-                <li>**تطوير الويب:** تصميم وتطوير مواقع إلكترونية متجاوبة وعصرية.</li>
-                <li>**التسويق الرقمي:** استراتيجيات تسويقية فعالة لزيادة تواجدك على الإنترنت.</li>
-                <li>**استشارات تقنية:** تقديم النصح والإرشاد للمشاريع التقنية.</li>
-                <li>**التصميم الجرافيكي:** إنشاء تصاميم جذابة ومبتكرة لعلامتك التجارية.</li>
+                <li>**Web Development:** Designing and developing responsive and modern websites.</li>
+                <li>**Digital Marketing:** Effective marketing strategies to boost your online presence.</li>
+                <li>**Technical Consulting:** Providing advice and guidance for technical projects.</li>
+                <li>**Graphic Design:** Creating attractive and innovative designs for your brand.</li>
             </ul>
-            <p>نحن نعمل معك خطوة بخطوة لضمان تحقيق أهدافك بأفضل صورة ممكنة.</p>
+            <p>We work with you every step of the way to ensure your goals are achieved in the best possible manner.</p>
         </div>
     </section>
 
     <section id="contact">
-        <h2>اتصل بنا</h2>
+        <h2>Contact Us</h2>
         <div class="section-content">
-            <p>هل لديك أي أسئلة أو استفسارات؟ لا تتردد في التواصل معنا. يسعدنا دائمًا سماعك!</p>
+            <p>Do you have any questions or inquiries? Feel free to contact us. We are always happy to hear from you!</p>
             <form action="#" method="POST">
-                <label for="name">الاسم الكامل:</label>
+                <label for="name">Full Name:</label>
                 <input type="text" id="name" name="name" required>
 
-                <label for="email">البريد الإلكتروني:</label>
+                <label for="email">Email Address:</label>
                 <input type="email" id="email" name="email" required>
 
-                <label for="message">رسالتك:</label>
+                <label for="message">Your Message:</label>
                 <textarea id="message" name="message" rows="5" required></textarea>
 
-                <button type="submit">إرسال الرسالة</button>
+                <button type="submit">Send Message</button>
             </form>
-            <p style="margin-top: 20px;">يمكنك أيضًا التواصل معنا عبر: info@yourwebsite.com</p>
+            <p style="margin-top: 20px;">You can also reach us via: info@yourwebsite.com</p>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2025 موقعنا المميز. جميع الحقوق محفوظة.</p>
+        <p>&copy; 2025 Our Amazing Website. All rights reserved.</p>
     </footer>
 
 </body>
